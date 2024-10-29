@@ -1,0 +1,130 @@
+.header-area {
+  background: #fff;
+}
+
+.header-top {
+  padding: 12px 0;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 99999;
+  background: #fff;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #00000020;
+}
+
+.header-logo {
+  text-align: center;
+}
+
+.header-logo a {
+  width: 175px;
+  display: inline-block;
+}
+
+.header-logo a:hover span {
+  text-decoration: none;
+}
+
+.header-logo a span {
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.toggle-icon {
+  font-size: 20px;
+}
+
+.main-menu {
+  position: relative;
+  background: var(--primary-color);
+}
+.main-menu > ul {
+  list-style: none;
+  text-align: center;
+}
+
+.main-menu > ul > li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.main-menu ul > li > a {
+  color: #fff;
+  border: solid transparent;
+  border-width: 2px 0;
+  padding: 15px 0;
+  display: block;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.main-menu ul > li > a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: 5px;
+  transition: width 0.2s linear;
+}
+
+.main-menu ul > li > a:hover:after {
+  width: 100%;
+}
+
+.sub-menu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 100%;
+  left: 0;
+  text-align: left;
+  padding: 20px;
+  background: var(--primary-color);
+  border-bottom: 2px solid #fff;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  z-index: 5;
+}
+
+.sub-menu.tiny-menu {
+  width: 240px;
+  min-width: max-content;
+}
+
+.sub-menu.small-menu {
+  width: 480px;
+}
+
+.sub-menu.medium-menu {
+  width: 720px;
+}
+
+.sub-menu.large-menu {
+  width: 856px;
+}
+
+.sub-menu-title {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+}
+
+.sub-menu-list ul {
+  list-style: none;
+}
+
+.main-menu ul li:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}

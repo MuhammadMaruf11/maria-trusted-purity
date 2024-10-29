@@ -1,0 +1,172 @@
+/* Banner Section */
+#banner .carousel-item {
+  position: relative;
+}
+
+#banner .carousel-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000080;
+  z-index: 1;
+}
+
+#banner .carousel-item img {
+  height: 700px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+#banner .carousel-caption {
+  z-index: 2;
+  color: #fff;
+  max-width: 50%;
+  margin: auto;
+}
+
+#banner .carousel-caption h5 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+/* Vision, Mission, Values Section */
+
+#vision-mission-values .card {
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#vision-mission-values .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#vision-mission-values .card-img-top {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+}
+
+#vision-mission-values .card h4 {
+  color: #fff;
+  font-size: var(--h4-font-size);
+}
+
+#vision-mission-values .card p,
+#vision-mission-values .card ul li {
+  font-size: var(--body-font-size);
+  color: var(--text-color);
+}
+
+#vision-mission-values .card ul li {
+  margin-bottom: 12px;
+}
+
+.vision-card {
+  background-color: #9dc1ef;
+}
+
+.mission-card {
+  background-color: #81b09a;
+}
+
+.values-card {
+  background-color: #f1a693;
+}
+
+/* Blog Section */
+
+#blog {
+  background: #f0f6f3;
+}
+
+#blog .card {
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#blog .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--box-shadow-color);
+}
+
+#blog .card-img-top {
+  width: 100%;
+  height: 266px;
+  object-fit: cover;
+}
+
+#blog .card-title {
+  font-size: var(--h4-font-size);
+}
+
+#blog .card-text {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+/* FAQ Section */
+.faq-accordion * {
+  border-radius: 0 !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Contact Section */
+#contact h2 {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+}
+
+.form-floating {
+  position: relative;
+}
+
+.form-floating input,
+.form-floating textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  background: #fff !important;
+}
+
+.form-floating label {
+  position: absolute;
+  font-size: var(--small-font-size);
+  color: var(--primary-color);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-floating input:focus ~ label,
+.form-floating textarea:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label,
+.form-floating textarea:not(:placeholder-shown) ~ label {
+  top: -0.75rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--primary-color);
+}
+
+.form-floating > .form-control:focus ~ label {
+  color: var(--primary-color);
+}
+
+.form-floating > .form-control:focus ~ label::after {
+  color: var(--primary-color);
+}
