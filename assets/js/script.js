@@ -166,41 +166,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /*-------------------------------------------
-        see more button
+        counter achievement
      --------------------------------------------- */
-    const commentItems = document.querySelectorAll('.comment-item');
-    const seeMoreBtn = document.getElementById('seeMoreBtn');
-    let visibleCount = 6; // Initial number of visible comments
-    const increment = 6; // Number of comments to show per click
+    const counters = document.querySelectorAll(".counter");
 
-    if (commentItems) {
-        // Initially hide all comments beyond the first 6
-        commentItems.forEach((item, index) => {
-            if (index >= visibleCount) {
-                item.style.display = 'none';
+    const updateCount = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        const speed = 200; // Adjust speed as needed
+        const increment = target / speed;
+
+        const countUp = () => {
+            const current = +counter.innerText;
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(countUp, 20);
+            } else {
+                counter.innerText = target;
             }
-        });
-    }
+        };
+        countUp();
+    };
 
-    if (seeMoreBtn) {
-        // Add event listener for "See More" button
-        seeMoreBtn.addEventListener('click', function () {
-            visibleCount += increment; // Increase visible count by 6
-
-            // Show the next set of comments
-            commentItems.forEach((item, index) => {
-                if (index < visibleCount) {
-                    item.style.display = 'flex';
+    // Using Intersection Observer to trigger counters when in view
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateCount(entry.target);
+                    observer.unobserve(entry.target);
                 }
             });
+        },
+        { threshold: 1.0 }
+    );
 
-            // Hide the button if all comments are shown
-            if (visibleCount >= commentItems.length) {
-                document.querySelector('.more-btn').style.display = 'none';
-            }
-        });
-    }
-
-
+    counters.forEach((counter) => {
+        observer.observe(counter);
+    });
 
 })

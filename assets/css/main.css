@@ -1,4 +1,8 @@
 /* Banner Section */
+#banner {
+  padding: 0;
+}
+
 #banner .carousel-item {
   position: relative;
 }
@@ -10,12 +14,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #00000080;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 85%
+  );
   z-index: 1;
 }
 
 #banner .carousel-item img {
-  height: 700px;
+  height: 735px;
   object-fit: cover;
   opacity: 0.9;
 }
@@ -32,7 +40,99 @@
   margin-bottom: 8px;
 }
 
+/* about us section  */
+
+/* CEO Message Section Styling */
+
+#about-us {
+  background: #f1f2fc;
+}
+
+#about-us h2 {
+  color: var(--primary-color);
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+#about-us .text-muted {
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--text-color);
+}
+
+#about-us img {
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-us p {
+  font-size: var(--body-font-size);
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* services section styling  */
+
+#services .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+#services .card:hover {
+  transform: translateY(-10px);
+}
+
+#services .card-img-top {
+  overflow: hidden;
+}
+
+#services .card-img-top img {
+  width: 100%;
+  object-fit: cover;
+  height: 275px;
+}
+
+#services .card-img-top:hover img {
+  transform: scale(1.05);
+}
+
+/* achievement section styling  */
+
+#achievements {
+  background-color: #fff;
+}
+
+#achievements h2 {
+  color: var(--primary-color, #333);
+  font-size: var(--h2-font-size, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.achievement {
+  background-color: var(--light-background-color, #fff);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow, 0 4px 8px rgba(0, 0, 0, 0.1));
+  margin: 10px;
+}
+
+.achievement h3 {
+  font-size: 3rem;
+  color: var(--primary-color, #007bff);
+  margin: 0;
+}
+
+.achievement p {
+  font-size: 1.2rem;
+  color: var(--text-color, #666);
+  margin-top: 10px;
+}
+
 /* Vision, Mission, Values Section */
+
+#vision-mission-values {
+  background: #f0f6f3;
+}
 
 #vision-mission-values .card {
   border: 1px solid var(--border-color);
@@ -48,11 +148,16 @@
   width: 50%;
   display: inline-block;
   margin: auto;
+  padding: 24px;
 }
 
 #vision-mission-values .card h4 {
-  color: #fff;
+  color: #000;
+  text-transform: uppercase;
   font-size: var(--h4-font-size);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 #vision-mission-values .card p,
@@ -66,21 +171,46 @@
 }
 
 .vision-card {
-  background-color: #9dc1ef;
+  background-color: #d0e7ff;
 }
 
 .mission-card {
-  background-color: #81b09a;
+  background-color: #cde8e3;
 }
 
 .values-card {
-  background-color: #f1a693;
+  background-color: #ffe5d4;
+}
+
+/* Brands Section Styling */
+#brands {
+  background-color: var(--light-background-color);
+}
+
+#brands h2 {
+  color: var(--primary-color);
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+}
+
+#brands .swiper-slide {
+  overflow: hidden;
+}
+
+#brands .swiper-slide img {
+  width: 100%;
+  height: 301.5px;
+  object-fit: cover;
+}
+
+#brands .swiper-slide img:hover {
+  transform: scale(1.05);
 }
 
 /* Blog Section */
 
 #blog {
-  background: #f0f6f3;
+  background: #fff;
 }
 
 #blog .card {
@@ -94,9 +224,17 @@
 }
 
 #blog .card-img-top {
+  overflow: hidden;
+}
+
+#blog .card-img-top img {
   width: 100%;
   height: 266px;
   object-fit: cover;
+}
+
+#blog .card-img-top:hover img {
+  transform: scale(1.05);
 }
 
 #blog .card-title {
@@ -107,6 +245,32 @@
   font-size: var(--small-font-size);
   color: var(--text-color);
   margin-bottom: 32px;
+}
+
+/* gallery section  */
+
+.galler-img {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.galler-img:hover img {
+  transform: scale(1.05);
+}
+
+.galler-img img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+/* cta section  */
+
+#cta {
+  background-color: #007bff;
+  color: white;
+  padding: 3rem 0;
 }
 
 /* FAQ Section */
