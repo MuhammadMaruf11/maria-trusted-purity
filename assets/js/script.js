@@ -130,38 +130,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /*-------------------------------------------
-        emoji selection
+       filter job
      --------------------------------------------- */
 
-    const commentInput = document.querySelector(".comment-input");
-    const emojiBtn = document.querySelector(".emoji-btn");
-    const emojiPicker = document.querySelector(".emoji-picker");
-    const emojis = document.querySelectorAll(".emoji");
 
-    if (emojiBtn) {
-        // Toggle emoji picker visibility
-        emojiBtn.addEventListener("click", function () {
-            emojiPicker.classList.toggle("visible");
-        });
-    }
+    const jobSearch = document.querySelector('#jobSearch');
 
-    if (emojis) {
-        // Add emoji to comment input when clicked
-        emojis.forEach(function (emoji) {
-            emoji.addEventListener("click", function () {
-                commentInput.value += emoji.textContent;
-            });
-        });
-    }
+    if (jobSearch) {
+        jobSearch.addEventListener('keyup', () => {
+            const searchInput = document.getElementById("jobSearch").value.toLowerCase();
+            const table = document.getElementById("jobTable");
+            const rows = table.getElementsByTagName("tr");
 
-    if (emojiPicker && emojiBtn) {
-        // Hide emoji picker if clicked outside
-        document.addEventListener("click", function (event) {
-            if (!emojiPicker.contains(event.target) && event.target !== emojiBtn) {
-                emojiPicker.classList.remove("visible");
+            for (let i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
+                const cells = rows[i].getElementsByTagName("td");
+                let matchFound = false;
+
+                for (let j = 0; j < cells.length - 1; j++) { // Ignore the last cell with the apply button
+                    if (cells[j] && cells[j].innerText.toLowerCase().includes(searchInput)) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = matchFound ? "" : "none";
             }
-        });
+        })
     }
+
 
 
 

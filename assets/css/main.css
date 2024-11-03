@@ -241,6 +241,96 @@
   margin-bottom: 32px;
 }
 
+/* Hero Section */
+.blog-hero {
+  background-image: url("../img/banner/img-7.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 735px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.blog-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.blog-hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Blog Card Styles */
+.blog-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.blog-card .card-body {
+  padding: 20px;
+}
+
+.blog-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.blog-card .card-text {
+  color: #6c757d;
+}
+
+/* Sidebar */
+.blog-sidebar {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blog-sidebar h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blog-sidebar ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.blog-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.blog-sidebar ul li a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-sidebar ul li a:hover {
+  color: #007bff;
+}
+
 /* gallery section  */
 
 .galler-img {
@@ -327,4 +417,145 @@
 
 .form-floating > .form-control:focus ~ label::after {
   color: var(--primary-color);
+}
+
+/* Hero Section */
+#career-hero {
+  background: url("../img/banner/img-6.jpg") no-repeat top center/contain;
+  color: #fff;
+  height: 735px;
+  position: relative;
+}
+
+.down-link-wrap {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.down-link-wrap a {
+  display: inline-block;
+  height: 108px;
+  width: 68px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.down-link-wrap a:hover {
+  background: var(--secondary-color);
+}
+
+.down-link-wrap a svg {
+  position: absolute;
+  top: 50%; /* Align in the middle vertically */
+  left: 50%; /* Align in the middle horizontally */
+  transform: translate(-50%, -50%); /* Center the icon */
+  animation: iconUpDown 2s ease-in-out infinite; /* Infinite up and down movement */
+}
+
+.down-link-wrap a:hover svg path {
+  fill: #fff;
+}
+
+@keyframes iconUpDown {
+  0% {
+    transform: translate(-50%, -50%) translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px); /* Move up by 10px */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0); /* Return to the original position */
+  }
+}
+/* benefit box  */
+
+#benefits {
+  background: #f0f00f0f;
+}
+
+.benefit-box {
+  box-shadow: 0 0 2px 0 #00000080;
+}
+
+.benefit-box.box-1 {
+  background: #c8fcff;
+}
+.benefit-box.box-2 {
+  background: #ffe9c8;
+}
+.benefit-box.box-3 {
+  background: #ffc8c8;
+}
+.benefit-box img {
+  width: 100px;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 20px;
+}
+
+.benefit-box h5 {
+  margin: 20px 0 5px;
+  color: var(--secondary-color);
+}
+
+/* Custom Style for Job Search Input */
+#jobSearch {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 30px; /* Rounded corners */
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: all 0.3s ease;
+}
+
+#jobSearch::placeholder {
+  color: #888; /* Light placeholder color */
+  font-style: italic;
+}
+
+#jobSearch:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on focus */
+  background-color: #f8f9fa; /* Light background on focus */
+}
+
+#jobSearch:hover {
+  border-color: var(--secondary-color);
+}
+
+#sister-companies .card-img-top {
+  overflow: hidden;
+}
+
+#sister-companies .card-img-top img {
+  width: 100%;
+  height: 266px;
+  object-fit: cover;
+}
+
+#sister-companies .card-img-top:hover img {
+  transform: scale(1.05);
+}
+
+#sister-companies .card-title a {
+  color: var(--secondary-color);
+}
+/*---------------------------
+contact page css 
+----------------------------*/
+#contact-hero {
+  background-image: url("../img/banner/img-8.jpg");
+  /* width: 100%; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  height: 735px;
+  position: relative;
 }
