@@ -3,7 +3,7 @@
 }
 
 .header-top {
-  padding: 12px 0;
+  padding: 6px 0;
 }
 
 .sticky-header {
@@ -22,7 +22,7 @@
 }
 
 .header-logo a {
-  width: 175px;
+  width: 105px;
   display: inline-block;
 }
 
@@ -36,6 +36,78 @@
   line-height: 1;
   margin-left: 5px;
   font-weight: 400;
+}
+
+.header-contact ul {
+  list-style: none;
+}
+
+.header-contact ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.header-contact ul li:last-child {
+  margin: 0;
+}
+
+.header-contact ul li a {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  font-weight: 500;
+}
+
+.header-contact ul li a i {
+  color: var(--primary-color);
+}
+
+.header-contact ul li a:hover span {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.header-social {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  justify-content: end;
+}
+
+.header-social h4 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.header-social ul {
+  list-style: none;
+}
+
+.header-social ul li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.header-social ul li:last-child {
+  margin-right: 0;
+}
+
+.header-social ul li a {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+.header-social ul li a:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
 }
 
 .toggle-icon {
@@ -60,13 +132,12 @@
   color: #fff;
   border: solid transparent;
   border-width: 2px 0;
-  padding: 15px 0;
-  display: block;
+  padding: 10px 0;
   position: relative;
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .main-menu ul > li > a::after {
@@ -76,7 +147,7 @@
   height: 2px;
   background: #fff;
   left: 0;
-  bottom: 5px;
+  bottom: 10px;
   transition: width 0.2s linear;
 }
 
@@ -91,7 +162,7 @@
   top: 100%;
   left: 0;
   text-align: left;
-  padding: 20px;
+  padding: 12px;
   background: var(--primary-color);
   border-bottom: 2px solid #fff;
   transition: opacity 0.3s linear, visibility 0.3s linear;
@@ -122,6 +193,14 @@
 
 .sub-menu-list ul {
   list-style: none;
+}
+
+.sub-menu-list ul > li > a {
+  padding: 5px 0;
+}
+
+.sub-menu-list ul > li > a::after {
+  bottom: 5px;
 }
 
 .main-menu ul li:hover .sub-menu {

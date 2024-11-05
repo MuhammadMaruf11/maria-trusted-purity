@@ -23,7 +23,7 @@
 }
 
 #banner .carousel-item img {
-  height: 735px;
+  height: calc(100vh - 142.84px);
   object-fit: cover;
   opacity: 0.9;
 }
@@ -33,6 +33,7 @@
   color: #fff;
   max-width: 50%;
   margin: auto;
+  bottom: 75px;
 }
 
 #banner .carousel-caption h5 {
@@ -558,4 +559,13 @@ contact page css
   color: #fff;
   height: 735px;
   position: relative;
+}
+
+.gslide-description.description-bottom,
+.gslide-description.description-top {
+  width: 55%;
+}
+
+.gslide-media {
+  width: 55%;
 }

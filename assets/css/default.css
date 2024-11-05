@@ -38,7 +38,7 @@
 body {
   color: var(--body-color);
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
 }
 
@@ -137,6 +137,26 @@ button:disabled {
 
 .section-title h2 {
   color: var(--primary-color);
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.section-title h2::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 15%,
+    rgba(0, 0, 0, 0) 15%,
+    rgba(0, 0, 0, 0) 30%,
+    var(--primary-color) 30%
+  );
 }
 
 .form-control:focus,
@@ -168,8 +188,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
   margin-bottom: 0;
   line-height: var(--heading-line-height);
 }

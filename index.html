@@ -22,9 +22,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- GLightbox CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     <link rel="stylesheet" href="./assets/css/swiper.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -35,10 +36,57 @@
     <div id="content">
       <header class="header-area">
         <div class="header-top">
-          <div class="header-logo">
-            <a href="./index.html">
-              <img src="./assets/img/logo/logo.png" alt="logo" />
-            </a>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-5">
+                <div class="header-contact">
+                  <ul>
+                    <li>
+                      <h4>
+                        <a href="mailto:info@maria.com"
+                          ><i class="fa fa-envelope-circle-check"></i>
+                          <span>info@maria.com</span>
+                        </a>
+                      </h4>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="tel:+8801234567890"
+                          ><i class="fa fa-phone"></i>
+                          <span>+880 123 456 7890</span>
+                        </a>
+                      </h4>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="header-logo">
+                  <a href="./index.html">
+                    <img src="./assets/img/logo/logo.png" alt="logo" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-5 text-end">
+                <div class="header-social">
+                  <h4>Social Media:</h4>
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-skype"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="header-bottom">
@@ -520,9 +568,9 @@
             <div class="row">
               <div class="col-xl">
                 <a
-                  class="galler-img"
+                  class="galler-img glightbox"
                   href="./assets/img/gallery/img-1.avif"
-                  data-lightbox="gallery"
+                  data-gallery="gallery"
                   data-title="Project 1"
                 >
                   <img
@@ -534,9 +582,9 @@
               </div>
               <div class="col-xl">
                 <a
-                  class="galler-img"
+                  class="galler-img glightbox"
                   href="./assets/img/gallery/img-4.avif"
-                  data-lightbox="gallery"
+                  data-gallery="gallery"
                   data-title="Project 2"
                 >
                   <img
@@ -548,9 +596,9 @@
               </div>
               <div class="col-xl">
                 <a
-                  class="galler-img"
+                  class="galler-img glightbox"
                   href="./assets/img/gallery/img-7.avif"
-                  data-lightbox="gallery"
+                  data-gallery="gallery"
                   data-title="Project 3"
                 >
                   <img
@@ -562,9 +610,9 @@
               </div>
               <div class="col-xl">
                 <a
-                  class="galler-img"
+                  class="galler-img glightbox"
                   href="./assets/img/gallery/img-10.avif"
-                  data-lightbox="gallery"
+                  data-gallery="gallery"
                   data-title="Project 4"
                 >
                   <img
@@ -576,9 +624,9 @@
               </div>
               <div class="col-xl">
                 <a
-                  class="galler-img"
+                  class="galler-img glightbox"
                   href="./assets/img/gallery/img-13.avif"
-                  data-lightbox="gallery"
+                  data-gallery="gallery"
                   data-title="Project 5"
                 >
                   <img
@@ -870,7 +918,7 @@
 
         <!-- contact section start  -->
 
-        <section id="contact" class="bg-light">
+        <!-- <section id="contact" class="bg-light">
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -927,7 +975,7 @@
               </button>
             </form>
           </div>
-        </section>
+        </section> -->
 
         <!-- contact section end -->
       </main>
@@ -1016,11 +1064,15 @@
     <!-- all script  -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- GLightbox JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="./assets/js/swiper.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        /*==========================
+              brand slider
+      =============================*/
         const swiper = new Swiper(".brand-slider", {
           slidesPerView: 1.5,
           spaceBetween: 30,
@@ -1035,6 +1087,13 @@
             1024: { slidesPerView: 3 },
             1440: { slidesPerView: 4 },
           },
+        });
+        /*==========================
+              gallery image 
+      =============================*/
+
+        const lightbox = GLightbox({
+          selector: ".glightbox",
         });
       });
     </script>
