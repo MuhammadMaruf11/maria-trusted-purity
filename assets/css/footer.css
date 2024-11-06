@@ -1,7 +1,7 @@
 /* destop footer css start  */
 .footer-area {
   background: #fff;
-  padding: 70px 0;
+  padding: 70px 0 0;
 }
 
 .footer-logo {
@@ -15,8 +15,23 @@
   max-width: 350px;
 }
 
+.footer-social {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.footer-social h4 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .footer-social ul {
   list-style: none;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .footer-social ul li {
@@ -26,23 +41,20 @@
 
 .footer-social ul li a {
   display: inline-flex;
-  width: 45px;
-  height: 45px;
-  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
 }
 
 .footer-social ul li a {
-  color: #000;
+  color: var(--primary-color);
+  background: #fff;
 }
 
 .footer-social ul li a:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .widget-title {
@@ -50,7 +62,9 @@
 }
 
 .widget-title h5 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: var(--h4-font-size);
+  font-weight: 400;
 }
 
 .footer-widget ul {
@@ -98,6 +112,56 @@
 
 .footer-copy-right ul li:first-child:before {
   display: none;
+}
+
+.widget-items {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 20px;
+}
+
+.widget-items .item-icon {
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.widget-items .item-icon i {
+  font-size: 20px;
+}
+
+.copy-right-list {
+  padding: 5px 0;
+}
+
+.copy-right-list ul li {
+  display: inline-block;
+  margin-right: 35px;
+  color: var(--secondary-color);
+}
+
+.copy-right-list ul li a {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.copy-right-list ul li a span {
+  transition: all 0.3s linear;
+}
+
+.copy-right-list ul li a:hover span {
+  transform: translateX(5px);
+}
+
+.copyright p {
+  color: #000;
 }
 
 /* destop footer css end  */

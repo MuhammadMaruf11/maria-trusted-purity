@@ -52,6 +52,7 @@
 }
 
 .header-contact ul li a {
+  font-size: var(--h5-font-size);
   display: flex;
   align-items: center;
   column-gap: 12px;
@@ -75,9 +76,11 @@
 }
 
 .header-social h4 {
+  font-size: var(--h5-font-size);
   font-weight: 500;
   margin-bottom: 5px;
   text-decoration: underline;
+  color: var(--primary-color);
 }
 
 .header-social ul {
@@ -95,19 +98,19 @@
 
 .header-social ul li a {
   display: inline-flex;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   font-size: 18px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
+  background: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
 }
 
 .header-social ul li a:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #fff;
+  color: var(--primary-color);
+  background: #fff;
 }
 
 .toggle-icon {
@@ -201,6 +204,10 @@
 
 .sub-menu-list ul > li > a::after {
   bottom: 5px;
+}
+
+.main-menu ul li .sub-menu {
+  padding: 0px 16px;
 }
 
 .main-menu ul li:hover .sub-menu {

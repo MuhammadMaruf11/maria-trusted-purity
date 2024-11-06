@@ -200,4 +200,35 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(counter);
     });
 
+
+    /*-------------------------------------------
+         bread crumbs
+      --------------------------------------------- */
+
+    const breadcrumb = document.getElementById("breadcrumb");
+    const pathArray = window.location.pathname.split("/").filter(Boolean);
+
+    let pathUrl = "";
+    if (breadcrumb) {
+        pathArray.forEach((segment, index) => {
+            pathUrl += `/${segment}`;
+
+            const isLast = index === pathArray.length - 1;
+            const li = document.createElement("li");
+            li.className = isLast ? "breadcrumb-item active" : "breadcrumb-item";
+            li.setAttribute("aria-current", isLast ? "page" : "");
+
+            if (isLast) {
+                li.textContent = segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+            } else {
+                const link = document.createElement("a");
+                link.href = pathUrl;
+                link.textContent = segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+                li.appendChild(link);
+            }
+
+            breadcrumb.appendChild(li);
+        });
+    }
+
 })
