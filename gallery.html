@@ -39,7 +39,7 @@
         <div class="header-top">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-lg-5">
+              <div class="col-lg-5 d-lg-block d-none">
                 <div class="header-contact">
                   <ul>
                     <li>
@@ -61,14 +61,34 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="col-lg-2 col-md-4 col-6">
                 <div class="header-logo">
                   <a href="./index.html">
                     <img src="./assets/img/logo/logo.png" alt="logo" />
                   </a>
                 </div>
               </div>
-              <div class="col-lg-5 text-end">
+              <div class="col-lg-5 col-md-7 d-md-block d-none text-end">
+                <div class="header-contact d-lg-none d-md-block">
+                  <ul>
+                    <li>
+                      <h4>
+                        <a href="mailto:info@maria.com"
+                          ><i class="fa fa-envelope-circle-check"></i>
+                          <span>info@maria.com</span>
+                        </a>
+                      </h4>
+                    </li>
+                    <li>
+                      <h4>
+                        <a href="tel:+8801234567890"
+                          ><i class="fa fa-phone"></i>
+                          <span>+880 123 456 7890</span>
+                        </a>
+                      </h4>
+                    </li>
+                  </ul>
+                </div>
                 <div class="header-social">
                   <h4>Social Media:</h4>
                   <ul>
@@ -87,10 +107,15 @@
                   </ul>
                 </div>
               </div>
+              <div class="col-md-1 col-6 d-lg-none d-md-block">
+                <div class="toggle-icon text-end">
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom d-lg-block d-none">
           <div class="main-menu">
             <ul>
               <li class="position-relative">
@@ -160,6 +185,67 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div class="mobile-menu d-lg-none">
+          <ul class="mobile-main-menu">
+            <li class="position-relative">
+              <a href="./index.html">
+                <span>Home </span>
+              </a>
+            </li>
+            <li>
+              <a href="./about-us.html">
+                <span>About Us </span>
+              </a>
+            </li>
+            <li class="position-relative">
+              <a href="#">
+                <span>Our Companies </span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <ul class="mobile-sub-menu">
+                <li>
+                  <a href="./maria-agro-food.html"
+                    >Maria Agro Food Industries
+                  </a>
+                </li>
+                <li>
+                  <a href="./hotel-maria-inn.html">Hotel Maria Inn</a>
+                </li>
+                <li>
+                  <a href="./maria-agro-farm.html">Maria Agro Farm</a>
+                </li>
+                <li>
+                  <a href="./maria-trading-farm.html"
+                    >Maria Trading Corporation
+                  </a>
+                </li>
+                <li>
+                  <a href="./ismail-tower.html">Ismail Tower</a>
+                </li>
+              </ul>
+            </li>
+            <li class="position-relative">
+              <a href="./blog.html">
+                <span>Blog </span>
+              </a>
+            </li>
+            <li class="position-relative">
+              <a href="./career.html">
+                <span>Career </span>
+              </a>
+            </li>
+            <li class="position-relative">
+              <a href="./gallery.html">
+                <span>Gallery </span>
+              </a>
+            </li>
+            <li class="position-relative">
+              <a href="./contact.html">
+                <span>Contact </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </header>
 
@@ -426,7 +512,7 @@
       <footer class="footer-area">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
               <div class="footer-wrap">
                 <div class="footer-logo">
                   <a href="./index.html">
@@ -443,7 +529,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 order-lg-2 order-3 col-6">
               <div class="footer-widget">
                 <div class="widget-title">
                   <h5>Pages</h5>
@@ -479,7 +565,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 order-lg-3 order-4 col-6">
               <div class="footer-widget">
                 <div class="widget-title">
                   <h5>Our Companies</h5>
@@ -517,7 +603,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 order-lg-4 order-2 col-md-6">
               <div class="footer-widget">
                 <div class="widget-title">
                   <h5>Contact Info</h5>
@@ -564,8 +650,8 @@
           </div>
         </div>
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
+          <div class="row align-items-center my-2">
+            <div class="col-md-6">
               <div class="copy-right-list">
                 <ul>
                   <li>
@@ -589,8 +675,8 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-6 text-end">
-              <dib class="copyright text-center">
+            <div class="col-md-6 text-end">
+              <dib class="copyright">
                 <p>
                   Copyright &copy; Maria Truested Purity 2024. All rights
                   reserved

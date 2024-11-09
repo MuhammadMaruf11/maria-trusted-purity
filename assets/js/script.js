@@ -2,34 +2,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /*-------------------------------------------
-        mobile menu 
-     --------------------------------------------- */
+       mobile menu 
+    --------------------------------------------- */
 
 
-    const toggleBtn = document.querySelectorAll('.toggle-icon');
-    const crossBtn = document.querySelector('#crossBtn');
+    const toggleBtn = document.querySelector('.toggle-icon');
+
+    toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('.mobile-menu').classList.toggle('open')
+        toggleBtn.classList.toggle('open')
+    })
 
 
+    document.querySelectorAll('.mobile-main-menu > li > a').forEach(mainMenuItem => {
+        mainMenuItem.addEventListener('click', function () {
 
-    if (toggleBtn) {
+            // Toggle the open class on the clicked item
+            const parentLi = mainMenuItem.parentElement;
+            const isOpen = parentLi.classList.contains('open');
+            document.querySelectorAll('.mobile-main-menu > li').forEach(li => li.classList.remove('open'));
 
-        toggleBtn.forEach(element => {
-            element.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelector('.mobile-menu').classList.add('open')
-            })
+            if (!isOpen) {
+                parentLi.classList.add('open');
+            }
         });
-    }
-
-    if (crossBtn) {
-        crossBtn.addEventListener('click', () => {
-            document.querySelector('.mobile-menu').classList.remove('open')
-        })
-    }
+    });
 
 
     /*-------------------------------------------
-     Sticky Header
+     Sticky Header 
  --------------------------------------------- */
 
     let win = $(window);
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sticky_id.addClass("sticky-header");
         }
     });
+
 
 
     /*-------------------------------------------
@@ -67,66 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    /*-------------------------------------------
-         font size increase and decrease 
-     --------------------------------------------- */
-
-    // Get the increase and decrease font size buttons
-    const increaseFontBtn = document.getElementById("increase-font");
-    const decreaseFontBtn = document.getElementById("decrease-font");
-
-    // Get the container whose font size will change
-    const textContainer = document.querySelector(".single-hero-description");
-
-    // Default font size and min/max caps
-    let currentFontSize = 16; // assuming the base font size is 16px
-    const minFontSize = 14;
-    const maxFontSize = 20;
-
-    // Function to set font size and manage button state
-    function setFontSize(size) {
-        textContainer.style.fontSize = size + "px";
-
-        // Disable buttons if limits are reached
-        if (currentFontSize <= minFontSize) {
-            decreaseFontBtn.classList.add('disabled')
-        } else {
-            decreaseFontBtn.classList.remove('disabled')
-        }
-
-        if (currentFontSize >= maxFontSize) {
-            increaseFontBtn.classList.add('disabled')
-        } else {
-            increaseFontBtn.classList.remove('disabled')
-        }
-    }
-
-    if (increaseFontBtn) {
-        // Increase font size
-        increaseFontBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            if (currentFontSize < maxFontSize) {
-                currentFontSize += 2; // increase by 2px
-                setFontSize(currentFontSize);
-            }
-        });
-    }
-
-    if (decreaseFontBtn) {
-        // Decrease font size
-        decreaseFontBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            if (currentFontSize > minFontSize) {
-                currentFontSize -= 2; // decrease by 2px
-                setFontSize(currentFontSize);
-            }
-        });
-    }
-
-    if (textContainer) {
-        // Initialize the buttons state based on default font size
-        setFontSize(currentFontSize);
-    }
 
 
     /*-------------------------------------------

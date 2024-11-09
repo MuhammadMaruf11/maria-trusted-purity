@@ -4,7 +4,7 @@
   padding: 70px 0 0;
 }
 
-.footer-logo {
+.footer-logo a {
   display: inline-block;
   width: 150px;
   margin-bottom: 24px;
@@ -37,6 +37,10 @@
 .footer-social ul li {
   display: inline-block;
   margin-right: 12px;
+}
+
+.footer-social ul li:last-child {
+  margin-right: 0;
 }
 
 .footer-social ul li a {
@@ -134,10 +138,6 @@
 
 .widget-items .item-icon i {
   font-size: 20px;
-}
-
-.copy-right-list {
-  padding: 5px 0;
 }
 
 .copy-right-list ul li {
