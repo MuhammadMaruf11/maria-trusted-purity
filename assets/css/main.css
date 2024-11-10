@@ -319,6 +319,14 @@
   font-weight: 400;
 }
 
+.blog-area .card .card-text {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .blog-area .btn {
   display: flex;
   align-items: center;
@@ -359,7 +367,7 @@
 }
 
 .blog-sidebar ul li a:hover {
-  color: #007bff;
+  color: var(--secondary-color);
 }
 
 /* gallery section  */
@@ -378,15 +386,6 @@
   width: 100%;
   height: 275px;
   object-fit: cover;
-}
-
-.gslide-description.description-bottom,
-.gslide-description.description-top {
-  width: 55%;
-}
-
-.gslide-media {
-  width: 55%;
 }
 
 .gallery-btn {

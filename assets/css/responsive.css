@@ -86,6 +86,15 @@
   .footer-logo a {
     width: 100px;
   }
+
+  #our-team .card .card-img-top {
+    width: 150px;
+    margin: 15px auto;
+  }
+
+  .blog-area .card img {
+    max-height: 185px;
+  }
 }
 
 /* Tablet Layout wide: 768px. */
@@ -368,6 +377,32 @@
 
   .footer-logo a {
     width: 100px;
+  }
+
+  .common-banner {
+    margin-top: 99px;
+  }
+
+  .our-story-description {
+    margin-top: 24px;
+  }
+
+  .section-title h2::after {
+    bottom: -5px;
+  }
+
+  .blog-area .card img {
+    max-height: 212px;
+  }
+
+  .blog-sidebar {
+    width: 48%;
+    display: inline-block;
+    margin-right: 24px;
+  }
+
+  .blog-sidebar:last-child {
+    margin-right: 0;
   }
 }
 
@@ -703,5 +738,21 @@
 
   .copyright p {
     text-align: center;
+  }
+
+  .common-banner {
+    margin-top: 62px;
+  }
+
+  .our-story-description {
+    margin-top: 24px;
+  }
+
+  .section-title h2::after {
+    bottom: -5px;
+  }
+
+  .contact-form {
+    margin-bottom: 24px;
   }
 }
